@@ -63,7 +63,7 @@ az aks update --enable-azure-monitor-metrics --name $aks_name --resource-group $
 # To finish, apply the "container-azm-ms-agentconfig.yaml". Uncomment the next line if you want apply the ama-logs configmap.
 #
 # Official Microsoft ConfigMap 
-# az aks command invoke  --resource-group $rg_name --name $aks_name --command "kubectl apply -f https://raw.githubusercontent.com/microsoft/Docker-Provider/ci_prod/kubernetes/container-azm-ms-agentconfig.yaml"
+az aks command invoke  --resource-group $rg_name --name $aks_name --command "kubectl apply -f https://raw.githubusercontent.com/microsoft/Docker-Provider/ci_prod/kubernetes/container-azm-ms-agentconfig.yaml"
 #
 # Modifed ConfigMap - As an example, enabled "[agent_settings.proxy_config]"
 # az aks command invoke  --resource-group $rg_name --name $aks_name --command "kubectl apply -f https://raw.githubusercontent.com/braieralves/AKS-Cluster-Monitoring-environment/refs/heads/main/modified_container-azm-ms-agentconfig.yaml
