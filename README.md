@@ -23,22 +23,7 @@ wget https://raw.githubusercontent.com/braieralves/AKS-Cluster-Monitoring-enviro
 3 - Provide requested information:
  Name of Resource Group, AKS cluster, Log Analytics Workspace, Azure Monitor Workspace(Managed Prometheus) and Managed Grafana.
 
-# Optional
----
 
-ConfigMap "_container-azm-ms-agentconfig.yaml_" (ama-logs) automatically applied in the end of enviroment created.
-
-Clone the repository _AKS-Cluster---Monitoring-environment_, edit the file _aks-monitoring.sh_, uncomment the line below and save the file before execute the script (command "_CTRL+o_") if you want to apply the configmap automatically after CI enabled.
-
-```
-# To finish, apply the "container-azm-ms-agentconfig.yaml" with 'ignore_proxy_settings = "true"" enabled'
-
-# Official Microsoft ConfigMap 
-# az aks command invoke  --resource-group $rg_name --name $aks_name --command "kubectl apply -f https://raw.githubusercontent.com/microsoft/Docker-Provider/ci_prod/kubernetes/container-azm-ms-agentconfig.yaml"
-#
-# Modifed ConfigMap - As an example, enabled "[agent_settings.proxy_config]"
-# az aks command invoke  --resource-group $rg_name --name $aks_name --command "kubectl apply -f https://raw.githubusercontent.com/braieralves/AKS-Cluster-Monitoring-environment/refs/heads/main/modified_container-azm-ms-agentconfig.yaml
-```
  
 
 
