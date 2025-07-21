@@ -1,9 +1,9 @@
 Import-Module -Name Az
-# Set the start and stop times in UTC
+# Set the start and stop times in UTC+1
 $startTime = "08:00:00"
-$stopTime = "13:00:00"
+$stopTime = "13:30:00"
 
-# Get the current time in UTC
+# Get the current time in UTC+1
 $currentTime = (Get-Date).AddHours(1)
 
 # Get the AKS cluster object
